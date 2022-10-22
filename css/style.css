@@ -1,0 +1,425 @@
+:root {
+  /* Gradient */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(240, 1%, 25%) 3%,
+    hsl(0, 0%, 19%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 18%, 0.251) 0%,
+      hsla(240, 2%, 11%, 0) 100%
+    ),
+    hsl(240, 2%, 13%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right,
+    hsl(45, 100%, 71%) 0%,
+    hsla(36, 100%, 69%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+      135deg,
+      hsla(45, 100%, 71%, 0.251) 0%,
+      hsla(35, 100%, 68%, 0) 59.86%
+    ),
+    hsl(240, 2%, 13%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 25%) 0%,
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right,
+    hsl(45, 100%, 72%),
+    hsl(35, 100%, 68%)
+  );
+
+  /* Gradient 2 */
+  --bg-gradient-anchorman: linear-gradient(
+    to bottom right,
+    hsl(201, 24%, 10%) 3%,
+    hsl(201, 24%, 26%) 97%
+  );
+  --bg-gradient-cool-current: linear-gradient(
+      to bottom right,
+      hsla(201, 20%, 19%, 0.251) 0%,
+      hsla(201, 24%, 16%, 0) 100%
+    ),
+    hsl(201, 24%, 18%);
+  --bg-gradient-sail-1: linear-gradient(
+    to bottom right,
+    hsl(204, 77%, 26%) 0%,
+    hsla(36, 100%, 69%, 0) 50%
+  );
+  --bg-gradient-sail-2: linear-gradient(
+      135deg,
+      hsla(204, 77%, 26%, 0.251) 0%,
+      hsla(35, 100%, 68%, 0) 59.86%
+    ),
+    hsl(240, 2%, 13%);
+  --border-gradient-cool-current: linear-gradient(
+    to bottom right,
+    hsl(201, 24%, 28%) 0%,
+    hsla(201, 24%, 28%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right,
+    hsl(45, 100%, 72%),
+    hsl(35, 100%, 68%)
+  );
+
+  /* Colors */
+  --jet: hsl(0, 0%, 22%);
+  --onyx: hsl(240, 1%, 17%);
+  --eerie-black-1: hsl(240, 2%, 13%);
+  --eerie-black-2: hsl(240, 2%, 12%);
+  --smoky-black: hsl(0, 0%, 7%);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 0%, 98%);
+  --orange-yellow-crayola: hsl(45, 100%, 72%);
+  --vegas-gold: hsl(45, 54%, 58%);
+  --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --bittersweet-shimmer: hsl(0, 43%, 51%);
+
+  /* Colors 2 */
+
+  --cool-current: hsl(201, 24%, 25%);
+  --anchorman: hsl(201, 20%, 20%);
+  --black-pearl-lighter: hsl(201, 24%, 18%);
+  --black-pearl-light: hsl(201, 24%, 16%);
+  --black-pearl-regular: hsl(201, 24%, 14%); /* background */
+  --arctic-paradise-1: hsl(204, 86%, 86%); /* text */
+  --arctic-paradise-2: hsla(204, 86%, 86%, 0.9);
+  --sail-maker: hsl(204, 77%, 26%); /* icons,btn */
+  --north-atlantic-breeze: hsl(204, 57%, 46%);
+  --kul-sharif-blue: hsl(204, 86%, 78%);
+  --kul-sharif-blue-70: hsla(204, 86%, 78%, 0.7);
+  --bittersweet-shimmer: hsl(0, 43%, 51%);
+
+  /* Font Properties  */
+  --ff-oswald: "Oswald", sans-serif;
+
+  --fs-1: 24px;
+  --fs-2: 18px;
+  --fs-3: 17px;
+  --fs-4: 16px;
+  --fs-5: 15px;
+  --fs-6: 14px;
+  --fs-7: 13px;
+  --fs-8: 11px;
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+
+  /* Shadows */
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+
+  /* Transition */
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease-in-out;
+}
+
+/* Globals */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+i,
+a,
+button,
+time,
+span {
+  display: block;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  background-color: none;
+  font: inherit;
+}
+
+::selection {
+  background: var(--sail-maker);
+  color: var(--black-pearl-regular);
+}
+
+:focus {
+  outline-color: var(--sail-maker);
+}
+
+html {
+  font-family: var(--ff-oswald);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black-pearl-regular);
+}
+
+/* Global reuse style */
+
+.sidebar {
+  background-color: var(--black-pearl-light);
+  border: 1px solid var(--cool-current);
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+}
+
+.icon-box {
+  position: relative;
+  background: var(--border-gradient-cool-current);
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--sail-maker);
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+}
+
+.icon-box::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--black-pearl-lighter);
+  border-radius: 1px;
+  z-index: -1;
+}
+
+.icon-box i {
+  stroke-width: 35px;
+}
+
+/* Main section */
+
+main {
+  margin: 15px 12px 75px 12px;
+  min-width: 260px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background: var(--cool-current);
+  margin: 16px 0;
+}
+
+/* Sidebar */
+
+.sidebar {
+  margin-bottom: 15px;
+  max-height: 120px;
+  overflow: hidden;
+  transition: var(--transition-1);
+}
+
+.sidebar.active {
+  max-height: 405px;
+}
+
+.sidebar-info {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-intems: center;
+  gap: 15px;
+}
+
+.avatar {
+  background: var(--bg-gradient-anchorman);
+  border-radius: 20px;
+}
+
+.content-info .name {
+  color: var(--arctic-paradise-2);
+  font-size: var(--fs-3);
+  font-weight: var(--fw-500);
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.content-info .title {
+  color: var(--arctic-paradise-1);
+  background: var(--anchorman);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  width: max-content;
+  padding: 3px 12px;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+}
+
+.more-info {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  border-radius: 0 15px;
+  font-size: 0.8rem;
+  color: var(--sail-maker);
+  background: var(--bg-gradient-anchorman);
+  padding: 10px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  z-index: 1;
+}
+
+.more-info::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--bg-gradient-cool-current);
+  transition: var(--transition-1);
+  z-index: -1;
+}
+
+.more-info:hover,
+.more-info:focus {
+  background: var(--bg-gradient-sail-1);
+}
+
+.more-info:hover::before,
+.more-info:focus::before {
+  background: var(--bg-gradient-sail-2);
+}
+
+.more-info span {
+  display: none;
+}
+
+.sidebar-info_more {
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-2);
+}
+
+.sidebar.active .sidebar-info_more {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contacts-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.contact-item {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-info {
+  max-width: calc(100%-46px);
+  width: calc(100%-46px);
+}
+
+.contact-title {
+  color: var(--kul-sharif-blue-70);
+  font-size: var(--fs-8);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  letter-spacing: 0.25px;
+}
+
+.contact-info :is(.contact-link, time, address) {
+  color: var(--arctic-paradise-2);
+  font-size: var(--fs-7);
+  letter-spacing: 0.25px;
+}
+
+.contact-info address {
+  font-style: normal;
+}
+
+.social-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding: 0 7px 4px 0;
+}
+
+.social-item .social-link {
+  color: var(--kul-sharif-blue-70);
+  font-size: 1.1rem;
+}
+
+.social-item .social-link:hover {
+  color: var(--kul-sharif-blue);
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: hsla(201, 20%, 20%, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--cool-curent);
+  border-radius: 12px 12px 0 0;
+  box-shadow: var(--shadow-2);
+  z-index: 5;
+}
+
+.navbar-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.navbar-link {
+  color: var(--kul-sharif-blue);
+  font-size: var(--fs-8);
+  padding: 20px 7px;
+  letter-spacing: 0.25px;
+  transition: color var(--transition-1);
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+  color: var(--kul-sharif-blue-70);
+}
+
+.navbar-link.active {
+  color: var(--sail-maker);
+}
