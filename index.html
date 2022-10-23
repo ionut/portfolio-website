@@ -124,34 +124,24 @@
             <nav class="navbar">
                 <ul class="navbar-list">
                     <li class="navbar-item">
-                        <button class="navbar-link active" data-nav-link>
-                            About
-                        </button>
+                        <button class="navbar-link active" data-nav-link>About</button>
                     </li>
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>
-                            Resume
-                        </button>
+                        <button class="navbar-link" data-nav-link>Resume</button>
                     </li>
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>
-                            Portfolio
-                        </button>
+                        <button class="navbar-link" data-nav-link>Projects</button>
                     </li>
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>
-                            Blogs
-                        </button>
+                        <button class="navbar-link" data-nav-link>Objectives</button>
                     </li>
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>
-                            Contact
-                        </button>
+                        <button class="navbar-link" data-nav-link>Contact</button>
                     </li>
                 </ul>
             </nav>
 
-            <article class="about" data-page="about">
+            <article class="about active" data-page="about">
                 <header>
                     <h2 class="h2 article-title">About me</h2>
                 </header>
@@ -283,7 +273,7 @@
                 </div>
             </article>
 
-            <article class="resume active" data-page="resume">
+            <article class="resume" data-page="resume">
                 <header class="h2 article-title">Resume</header>
                 <section class="timeline">
                     <div class="title-wrapper">
@@ -361,7 +351,69 @@
                 </section>
                 <section class="skill">
                     <h3 class="h3 skills-title">My Skills</h3>
-                    <ul class="skills-list content-card">
+                    <ul class="skills-list-images content-card">
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-brands fa-html5"></i>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-brands fa-linux"></i>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-brands fa-bootstrap"></i>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-brands fa-markdown"></i>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-brands fa-wordpress"></i>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-brands fa-keycdn"></i>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-solid fa-shield"></i>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-brands fa-jenkins"></i>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-brands fa-git"></i>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item-box">
+                                <i class="fa-brands fa-cloudflare"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- <ul class="skills-list content-card">
                         <li class="skills-item">
                             <div class="title-wrapper">
                                 <h5 class="h5">HTML</h5>
@@ -407,10 +459,173 @@
                                 <div class="skill-progress-fill" style="width:35%"></div>
                             </div>
                         </li>
+                    </ul> -->
+                </section>
+            </article>
+
+            <article class="projects" data-page="projects">
+                <header>
+                    <h2 class="h2 article-title">Projects</h2>
+                </header>
+                <section class="projects-list">
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <button class="active" data-filter-btn>All</button>
+                        </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Web Development</button>
+                        </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Markdown Documentation</button>
+                        </li>
+                    </ul>
+                    <div class="filter-select-box">
+                        <button class="filter-select" data-select>
+                            <div class="select-value" data-select-value>Select Category</div>
+                            <div class="select-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </button>
+
+                        <ul class="select-list">
+                            <li class="select-item">
+                                <button data-select-item>All</button>
+                            </li>
+                            <li class="select-item">
+                                <button data-select-item>Web Development</button>
+                            </li>
+                            <li class="select-item">
+                                <button data-select-item>Markdown</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="project-list">
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <img src="images/project-1.jpg" alt="Project 1" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">
+                                    Project 1
+                                </h3>
+                                <p class="project-category">Web Development</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="markdown">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <img src="images/project-5.png" alt="Project 5" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">
+                                    Project 5
+                                </h3>
+                                <p class="project-category">Markdown</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <img src="images/project-2.png" alt="Project 2" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">
+                                    Project 2
+                                </h3>
+                                <p class="project-category">Web Development</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="markdown">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <img src="images/project-5.png" alt="Project 5" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">
+                                    Project 5
+                                </h3>
+                                <p class="project-category">Markdown</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <img src="images/project-3.jpg" alt="Project 3" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">
+                                    Project 3
+                                </h3>
+                                <p class="project-category">Web Development</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <img src="images/project-4.png" alt="Project 4" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">
+                                    Project 4
+                                </h3>
+                                <p class="project-category">Web Development</p>
+                            </a>
+                        </li>
+
                     </ul>
                 </section>
             </article>
 
+            <article class="objectives" data-page="objectives">
+                <header>
+                    <h2 class="h2 article-title">
+                        Objectives
+                    </h2>
+                </header>
+                <section class="objectives-list">
+                    <h3 class="h3">To be continued...</h3>
+                    <p> style=learn before/after</p>
+                </section>
+            </article>
+
+            <article class="contact " data-page="contact">
+                <header>
+                    <h2 class="h2 article-title">
+                        Contact
+                    </h2>
+                </header>
+                <section class="contact-form">
+                    <form action="" class="form" data-form>
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" class="form-input" placeholder="Full Name" required
+                                checked data-form-input>
+                            <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required
+                                data-form-input>
+                            <input type="email" name="email" class="form-input" placeholder="Your Email Adress" required
+                                data-form-input>
+                        </div>
+                        <textarea name="message" class="form-input" placeholder="Your Message" required
+                            data-form-input></textarea>
+                        <button class="form-btn" type="submit" disabled data-form-btn>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </section>
+            </article>
         </div>
     </main>
 
