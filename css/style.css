@@ -488,7 +488,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(201, 20%, 20%, 0.75);
+  background: hsla(201, 20%, 20%, 0.8);
   backdrop-filter: blur(10px);
   border: 1px solid var(--cool-curent);
   border-radius: 12px 12px 0 0;

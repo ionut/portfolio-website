@@ -76,6 +76,24 @@ let filterFunc=function(selectedValue){
     }
 }
 
+let lastClickedBtn = filterBtn[0];
+
+for (let i = 0; i < filterBtn.length; i++) {
+
+  filterBtn[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    filterFunc(selectedValue);
+
+    lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn = this;
+
+  });
+
+}
+
 // contact form
 let form=document.querySelector("[data-form]");
 let formInputs=document.querySelectorAll("[data-form-input]");
