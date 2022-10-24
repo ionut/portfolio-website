@@ -90,7 +90,7 @@
   --black-pearl-regular: hsl(201, 24%, 14%); /* background */
   --arctic-paradise-1: hsl(204, 86%, 86%); /* text */
   --arctic-paradise-2: hsla(204, 86%, 86%, 0.9);
-  --sail-maker: hsl(204, 57%, 46%); /* icons,btn */
+  --sail-maker: hsl(201, 53%, 80%); /* icons,btn */
   --north-atlantic-breeze: hsl(204, 77%, 26%);
   --kul-sharif-blue: hsl(204, 86%, 78%);
   --kul-sharif-blue-70: hsla(204, 86%, 78%, 0.7);
@@ -1719,4 +1719,12 @@ textarea.form-input::-webkit-resize {
   .timeline-text {
     max-width: 700px;
   }
+}
+
+.color-red {
+  color: red;
+}
+
+.color-blue {
+  color: blue;
 }

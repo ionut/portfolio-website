@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ionut H. Website Portfolio">
     <title>Ionut H. - Personal Portfolio</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
@@ -18,6 +19,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Email.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('PT92DKz1_nc31cU5c');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_cndgven', 'template_xbusqnx', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -25,14 +50,14 @@
         <aside class="sidebar" data-sidebar>
             <div class="sidebar-info">
                 <figure class="avatar">
-                    <img src="images/avatar-me.png" alt="Ionut H." width="80">
+                    <img src="images/avatar-me.png" alt="Ionut H." width="80" height="80">
                 </figure>
                 <div class="content-info">
                     <h1 class="name" title="Ionut H.">Ionut H.</h1>
                     <p class="title">Web Developer</p>
                 </div>
 
-                <button class="more-info" data-sidebar-btn>
+                <button class="more-info" data-sidebar-btn aria-label="ShowContact Button">
                     <span>Show Contacts</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
@@ -95,27 +120,30 @@
                     <!-- LinkedIn -->
                     <li class="social-item">
                         <a href="https://www.linkedin.com/in/ionu%C8%9B-c%C4%83t%C4%83lin-hu%C8%99oschi-1295a11b2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bb%2BvzS6qTR4%2BpA4Sno9t2qg%3D%3D"
-                            class="social-link" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            class="social-link" target="_blank" aria-label="Read more about Ionut LinkedIn Profile"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
                     </li>
                     <!-- GitHub -->
                     <li class="social-item">
-                        <a href="https://github.com/ionut" class="social-link" target="_blank"><i
-                                class="fa-brands fa-github" target="_blank"></i></a>
+                        <a href="https://github.com/ionut" class="social-link" target="_blank"
+                            aria-label="Read more about Ionut Git Profile"><i class="fa-brands fa-github"></i></a>
                     </li>
                     <!-- StackOverflow -->
                     <li class="social-item">
                         <a href="https://stackoverflow.com/users/14607840/husoschi-ionut-catalin" class="social-link"
-                            target="_blank"><i class="fa-brands fa-stack-overflow"></i></a>
+                            target="_blank" aria-label="Read more about Ionut StackOverflow Profile"><i
+                                class="fa-brands fa-stack-overflow"></i></a>
                     </li>
                     <!-- FreeCodeCamp -->
                     <li class="social-item">
-                        <a href="https://www.freecodecamp.org/ionut" class="social-link" target="_blank"><i
+                        <a href="https://www.freecodecamp.org/ionut" class="social-link" target="_blank"
+                            aria-label="Read more about Ionut FreeCodeCamp Profile"><i
                                 class="fa-brands fa-free-code-camp"></i></a>
                     </li>
                     <!-- Instagram -->
                     <li class="social-item">
-                        <a href="https://www.instagram.com/iasii.marilor.destine/" class="social-link"
-                            target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/iasii.marilor.destine/" class="social-link" target="_blank"
+                            aria-label="Read more about Ionut Insta Profile"><i class="fa-brands fa-instagram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -160,7 +188,7 @@
                     <ul class="service-list">
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="images/web-development.svg" alt="dev icon" width="50">
+                                <img src="images/web-development.svg" alt="dev icon" width="50" height="50">
                             </div>
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Web Development</h4>
@@ -170,7 +198,7 @@
                         </li>
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="images/administrator-developer.svg" alt="dev icon" width="50">
+                                <img src="images/administrator-developer.svg" alt="dev icon" width="50" height="50">
                             </div>
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Web Administrator</h4>
@@ -187,7 +215,8 @@
                         <li class="testimonials-item">
                             <div class="content-card" data-testimonials-item>
                                 <figure class="testimonials-avatar-box">
-                                    <img src="images/stefan-b.png" alt="Stefan B." width="60" data-testimonials-avatar>
+                                    <img src="images/stefan-b.png" alt="Stefan B." width="60" height="60"
+                                        data-testimonials-avatar>
                                 </figure>
                                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Stefan B.</h4>
                                 <div class="testimonials-text" data-testimonials-text>
@@ -202,7 +231,8 @@
                         <li class="testimonials-item">
                             <div class="content-card" data-testimonials-item>
                                 <figure class="testimonials-avatar-box">
-                                    <img src="images/george-t.png" alt="George T." width="60" data-testimonials-avatar>
+                                    <img src="images/george-t.png" alt="George T." width="60" height="60"
+                                        data-testimonials-avatar>
                                 </figure>
                                 <h4 class="h4 testimonials-item-title" data-testimonials-title>George T.</h4>
                                 <div class="testimonials-text" data-testimonials-text>
@@ -217,7 +247,7 @@
                         <li class="testimonials-item">
                             <div class="content-card" data-testimonials-item>
                                 <figure class="testimonials-avatar-box">
-                                    <img src="images/adriana-c.png" alt="Adriana C." width="60"
+                                    <img src="images/adriana-c.png" alt="Adriana C." width="60" height="60"
                                         data-testimonials-avatar>
                                 </figure>
                                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Adriana C.</h4>
@@ -233,7 +263,8 @@
                         <li class="testimonials-item">
                             <div class="content-card" data-testimonials-item>
                                 <figure class="testimonials-avatar-box">
-                                    <img src="images/eduard-b.png" alt="Eduard B." width="60" data-testimonials-avatar>
+                                    <img src="images/eduard-b.png" alt="Eduard B." width="60" height="60"
+                                        data-testimonials-avatar>
                                 </figure>
                                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Eduard B.</h4>
                                 <div class="testimonials-text" data-testimonials-text>
@@ -255,7 +286,7 @@
                         </button>
                         <div class="modal-img-wrapper">
                             <figure class="modal-avatar-box">
-                                <img src="images/stefan-b.png" alt="Stefan B." width="80" data-modal-img>
+                                <img src="images/stefan-b.png" alt="Stefan B." width="80" height="80" data-modal-img>
                             </figure>
                             <img src="images/icon-quote.svg" alt="quotes">
                         </div>
@@ -322,7 +353,7 @@
                     </div>
                     <ol class="timeline-list">
                         <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Web Developer % Web Administrator</h4>
+                            <h4 class="h4 timeline-item-title">Web Developer & Web Administrator</h4>
                             <span>2021 - present</span>
                             <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod
@@ -609,18 +640,18 @@
                     </h2>
                 </header>
                 <section class="contact-form">
-                    <form action="" class="form" data-form>
+                    <form id="contact-form" class="form" data-form>
                         <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full Name" required
+                            <input type="text" name="user_name" class="form-input" placeholder="Full Name" required
                                 checked data-form-input>
-                            <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required
-                                data-form-input>
-                            <input type="email" name="email" class="form-input" placeholder="Your Email Adress" required
-                                data-form-input>
+                            <input type="tel" name="contact_number" class="form-input" placeholder="Phone Number"
+                                required data-form-input>
+                            <input type="email" name="user_email" class="form-input" placeholder="Your Email Adress"
+                                required data-form-input>
                         </div>
                         <textarea name="message" class="form-input" placeholder="Your Message" required
                             data-form-input></textarea>
-                        <button class="form-btn" type="submit" disabled data-form-btn>
+                        <button class="form-btn" type="submit" disabled data-form-btn value="Send">
                             <i class="fa-regular fa-paper-plane"></i>
                             <span>Send Message</span>
                         </button>
@@ -633,6 +664,7 @@
 
 
     <script src="js/script.js"></script>
+
 </body>
 
 
